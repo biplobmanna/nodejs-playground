@@ -1,0 +1,89 @@
+# Events
+
+- system produces or fires a signal
+- provides a mechanism by which an action can be automatically taken
+- each event is represented by an object that is based on the Event Interface
+- react to an event - attach an event handler/listener
+  - `object.addEventListener("event", callback)`
+  - `object.removeEventListener("event", callback)`
+  - aborting using a controller
+    - `AbortController` object
+    - passing a `AbortSignal` using the above `obj.abort()`
+    - controllers can be registered to events
+  - removing eventListeners can be useful for
+    - improve efficiency
+    - register different controllers for the same event based on context
+- event handler functions can also be registered using the event handler properties
+  - `btn.onclick = fn`
+  - multiple functions cannot be registered like this for the events
+- inline event handlers
+  - directly calling the event handler functions from html code
+  - \<button onclick="fn()"\>
+  - don't use; bad practice
+- event object is automatically passed to event handlers
+- default mode of certain events is to refresh the page for doing a http request
+  - `event.preventDefault()` stops that, and is good to use in practice
+- event bubbling / propagation
+  - nested events are caught by parent as well, if listener exists
+  - context passed is where the event is caught
+  - can be prevented using `stopPropagation()`
+- event capture
+  - opposite of event bubbling / propagation
+  - the parent event listener catches the event first
+  - done by passing `{capture:true}` to the event listener object
+- event delegation
+  - event is captured by the parent for all nested children
+  - some logic to implement child specific action
+-
+
+## main types of events
+
+- **animation** :: related to WebAnimationAPI, changes in animation status
+- **async** data fetch :: fetching data
+- **clipboard** :: cut/copy/paste
+- **composition** :: related to 'composition' - entering text "indirectly"
+  - eg: text entered via a speech to text engine,
+    or using special key combinations that modify keyboard presses
+    to represent new characters in another language
+- **css transition** :: css transitions start, stop, cancelled
+- **database** :: database operations - open, close, transactions, errors
+- **dom mutation** :: modification of dom hierarchy or nodes
+- **drag'n'drop, wheel** :: html drag&drop api and wheel events
+- **focus** :: elements gaining / losing focus
+- **form** :: handling forms
+- **fullscreen** :: transition for fullscreen
+- **gamepad** :: gamepad API
+- **gestures** :: touch events for implementing gestures
+- **history** :: related to History API
+- **html display states** :: changing the state of a display or text elem
+- **inputs** :: input elements events
+- **keyboard** :: keyboard events
+- **load/unload documents** :: load/unload html documents
+- **manifests** :: installation of progressive web app manifests
+- **media** :: related to media usage
+- **messaging** :: window receiving a message from another browsing context
+- **mouse** :: mouse based events
+- **network** :: based on network connections
+- **payments** :: payment request api
+- **performance**
+  - resolution time api
+  - performance timeline api
+  - navigation timing api
+  - user timing api
+  - resource timing api
+- **pointer** :: hardware agnostic notification from pointing devices
+- **print** :: printing
+- **promise rejection** :: sent to global script context on rejected promises
+- **sockets** :: websockets api
+- **svg** :: svg images
+- **text select** :: selecting text
+- **touch** :: interacting with a touchscreen
+- **VR** :: WebXR device API
+- **RTC** :: WebRTC API
+- **server-sent events** :: server sent events api
+- **speech** :: web speech API
+- **workers** ::
+  - web workers api
+  - service worker api
+  - broadcast channel api
+  - channel messaging api
