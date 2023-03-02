@@ -1,0 +1,18 @@
+{
+  "name": "js-ts-basics",
+  "version": "1.0.0",
+  "description": "playing around with js & ts and their basics",
+  "main": "index.js",
+  "repository": "https://github.com/biplobmanna/js-ts-basics",
+  "author": "biplobmanna",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.14.3",
+    "colors": "^1.4.0",
+    "nodemon": "^2.0.20"
+  },
+  "scripts": {
+    "eventLoop": "nodemon ./event-loop/dist/eventHandling.js",
+    "events": "nodemon ./events/dist/event.js"
+  }
+}

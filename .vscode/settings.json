@@ -1,0 +1,8 @@
+{
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#60070B",
+    "titleBar.activeBackground": "#860A10",
+    "titleBar.activeForeground": "#FFFBFC"
+  },
+  "cSpell.words": ["fullscreen", "gamepad", "Traversy"]
+}
