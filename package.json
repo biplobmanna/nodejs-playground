@@ -12,7 +12,7 @@
     "nodemon": "^2.0.20"
   },
   "scripts": {
-    "eventLoop": "nodemon ./event-loop/dist/eventHandling.js",
+    "eventLoop": "nodemon ./event-loop/dist/eventLoop.js",
     "events": "nodemon ./events/dist/event.js"
   }
 }
